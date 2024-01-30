@@ -1,8 +1,11 @@
 FROM golang
 
 WORKDIR /work
-COPY . /work/
+
+COPY cmd /work/cmd
+COPY internal /work/internal
+COPY go.mod /work/
 
 RUN go build -o hello ./cmd/server
 
-CMD ["/work/hello"]
+ENTRYPOINT ["/work/hello"]
