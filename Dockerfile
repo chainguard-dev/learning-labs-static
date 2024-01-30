@@ -1,4 +1,4 @@
-FROM golang
+FROM cgr.dev/chainguard/go
 
 WORKDIR /work
 
